@@ -1,0 +1,208 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+   
+   
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../Media/material.min.css">
+    <link rel="stylesheet" href="../Media/styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+	
+	
+	
+.demo-layout-transparent {
+	background-color:#939;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+.demo-card-wide.mdl-card {
+	  width: 1200px;
+	  
+	}
+	.demo-card-wide > .mdl-card__title {
+	  color: #fff;
+	  height: 476px;
+	  margin:10px;
+	  
+	  
+	  background: url('../Media/a.jpg') center / cover;
+	}
+	
+	
+	.demo-card-wide > .mdl-card__menu {
+	  color: #fff;
+	}
+	
+}
+    </style>
+  </head>
+  
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    
+    
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title"><h2 id="top">&nbsp;&nbsp;&nbsp;图书管理</h2></span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+      <a class="mdl-navigation__link " href="../add_author/">增加作者</a>
+      <a class="mdl-navigation__link" href="../add_book/">增加图书</a>
+      <a class="mdl-navigation__link" href="../view_book/">浏览图书</a>
+      <a class="mdl-navigation__link" href="../search_author/">按作者查询</a>
+
+      </nav>
+    </div>
+    
+  </header>
+  <div class="mdl-layout__drawer mdl-color--lime-100">
+    <span class="mdl-layout-title">图书管理快速导航</span>
+    
+    <div align="center">
+    <img src="../Media/compass.png" width="50" height="50">
+    </div>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="../add_author/">增加作者</a>
+      <a class="mdl-navigation__link" href="../add_book/">增加图书</a>
+      <a class="mdl-navigation__link" href="../view_book/">浏览图书</a>
+      <a class="mdl-navigation__link" href="../search_author/">按作者查询</a>
+
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+  
+    <div class="page-content"><!-- Your content goes here -->
+    
+    <!-- Wide card with share menu button -->
+
+ 
+
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--4dp">
+
+    <div class="demo-card-wide mdl-card mdl-shadow--4dp">
+          <div class="mdl-card__title">
+            <h1 class="mdl-card__title-text">欢迎 Welcome</h1>
+          </div>
+          <div class="mdl-card__supporting-text">
+                  <h4>书香飘过，不是风的错乱，恰似你的柔情</h4>
+                   <p>
+                   在行走的人间<br>
+                笑多半为了应酬<br>
+                春天里的那些可除外<br>
+                而春日里多是风和日丽<br>
+                   </p>
+          </div>
+      
+      
+    
+    
+     
+    
+    </div>
+</section>
+    
+    
+    
+    
+    
+        
+    
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        
+        <div class="mdl-card__media mdl-color--indigo-800" align="center">
+        <img src="../Media/dog.jpg" width="1200" height="520">
+        
+        </div>
+        
+          <div class="mdl-card__supporting-text">
+          
+          <h4>常见操作错误</h4>
+            <li>this author id exists  增加作者时，此ID已经存在，请核对检查</li>
+            <li>we cannot find this author id ,please insert the author firstly 增加图书时，作者ID并不存在，请核对</li>
+            <li>can not find this author 按照作者名字查询时不能找到该作者，核对拼写，不支持模糊搜索</li>
+            <li>this book already exists ,can not be inserted again\nbut you can update it 增加图书时，ISBN已经存在，请核对
+             </li>
+          </div>
+      
+    
+    
+    </div>
+</section>
+
+
+   <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+   </section>
+
+
+
+
+    <footer class="mdl-mega-footer">
+    
+          <div class="mdl-mega-footer--middle-section">
+            <p class="mdl-typography--font-light" align="center">Powered by 李东升</p>
+           <p class="mdl-typography--font-light" align="center">联系方式：QQ：2236628612</p>
+          </div>
+          
+     </footer>
+        
+      
+        
+  </main>
+</div>
+
+    <a href="#top"  id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">回到顶部</a>
+    
+    <script src="../Media/material.min.js"></script>
+  </body>
+</html>

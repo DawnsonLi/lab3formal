@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>按作者查询</title>
+<link href="../Media/bootstrap.css" rel="stylesheet">
+<link href="../Media/flat-ui.css" rel="stylesheet">
+
+<script language="javascript" type="text/javascript">
+function check()
+{
+	
+  if(frm.author_name.value == "")
+     {
+        frm.author_name.focus();
+		frm.author_name.placeholder="作者名字不能为空"
+        return false;
+     }
+	
+  
+   } 
+   
+</script>
+
+</head>
+<!-- 输入作者名字，查询该作者所著的全部图书的题目；
+-->
+<body>
+
+<div class="demo-headline">
+        <h1 class="demo-logo">
+          <a href="../index/">
+          <h2>返回首页</h2>
+          </a>
+         </h1>
+</div>
+      
+      
+ <div class="container">
+<div class="login" >
+<div class="login-screen">
+<div class="login-icon">
+<img src="../Media/book.png">
+           <h5>作者名字查询</h5>
+          </div>
+	<form action="/search_by_author/" name="frm" method="get" onSubmit="return  check()">
+    	<div class="login-form">
+    	<div class="control-group" >
+        <input type="text" name="author_name" placeholder="输入作者姓名" class="login-field">
+        </div>
+        
+        <input type="submit" value="搜索" class="btn btn-large btn-block btn-primary">
+        </div>
+ 	</form>
+</div>
+</div>
+</div>
+
+<h3 align="center" >Powered by by 李东升</h3>
+	  <br>
+      <br>
+      <br>
+</body>
+</html>

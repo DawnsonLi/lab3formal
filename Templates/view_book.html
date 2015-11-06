@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浏览书目</title>
+<link href="../Media/bootstrap.css" rel="stylesheet">
+<link href="../Media/flat-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="../Media/material.min.css">
+    <link rel="stylesheet" href="../Media/styles.css">
+    
+ <style>
+   
+	
+	
+	  
+	.demo-card-wide.mdl-card {
+	  width: 1200px;
+	  
+	}
+	.demo-card-wide > .mdl-card__title {
+	  color: #fff;
+	  height: 320px;
+	  margin:10px;
+	  
+	  
+	  background: url('../Media/i.jpg') center / cover;
+	}
+	
+	
+	.demo-card-wide > .mdl-card__menu {
+	  color: #fff;
+	}
+ #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+	
+    </style>
+</head>
+
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">图书管理</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="../index/">返回首页</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="mdl-layout__content">
+    <div class="page-content">
+    
+  
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+		
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text" id="top">所有书目</h2>
+      </div>
+      <div class="mdl-card__supporting-text" align="center">
+      <h3>丹青笔墨</h3>
+      
+  
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+          <thead>
+            <tr>
+              <th class="mdl-data-table__cell--non-numeric">图书题目</th>
+              <th>点击更新 Upadate information</th>
+              <th>点击删除 Delete caution</th>
+            
+            </tr>
+            
+          </thead>
+          
+          <tbody>
+              
+           {% for book in book_list %}
+             <tr>
+     
+               
+          <form method="get" action="/search_book/">
+          <div class="control-group" >
+            <input name="ISBN" type="hidden" value="{{book.ISBN}}" >
+            <td><input type="submit" value="{{book.Title}}" class="btn btn-large btn-block btn-primary" class="mdl-data-table__cell--non-numeric">
+           </td>
+          </form>
+          
+          <form method="get" action="/update_book/">
+          <div class="control-group" >
+            <input name="ISBN" type="hidden" value="{{book.ISBN}}">
+            <td><input type="submit" value="更新" class="btn btn-large btn-block btn" width="100"></td>
+            </div>
+          </form>
+          
+          
+          <form method="get" action="/delete/">
+          <div class="control-group" >
+            <input name="ISBN" type="hidden" value="{{book.ISBN}}">
+            <td><input type="submit" value="一键删除" class="btn btn-large btn-block btn-warning"></td>
+            </div>
+          </form>
+          
+          
+     </tr>
+    {% endfor %}
+      
+      
+            
+          </tbody>
+        </table>
+    
+    
+    	<br>
+        <br>
+        
+        
+        <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="../index/">
+          返回首页
+        </a>
+      	</div>
+        </div>
+    
+</div>
+    
+</section>   
+
+
+    
+  </main>
+</div>
+   <a href="#top"  id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">回到表单头部</a>
+<script src="../Media/material.min.js"></script>
+</body>
+</html>

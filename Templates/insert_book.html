@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>增加图书</title>
+<link href="../Media/bootstrap.css" rel="stylesheet">
+<link href="../Media/flat-ui.css" rel="stylesheet">
+
+<script language="javascript" type="text/javascript">
+function check()
+{
+	
+    if(frm.title.value == "")//题目
+     {
+        
+        frm.title.focus();
+		frm.title.placeholder="图书题目名不能为空"
+        return false;
+     }
+	 
+	if(frm.publisher.value == "")//出版者
+     {
+        
+        frm.publisher.focus();
+		frm.publisher.placeholder="出版者信息不能为空"
+        return false;
+     }
+	 //此处待定
+	 if(frm.publishDate.value == "")//出版日期
+     {
+        
+        frm.publishDate.focus();
+		frm.publishDate.placeholder="出版日期不能为空"
+        return false;
+     }
+	 if(frm.price.value == "")//价格
+     {
+        
+        frm.price.focus();
+		frm.price.placeholder="价格字段不能为空"
+        return false;
+     }
+	 if(frm.author_id.value== "")//作者ID
+     {
+        
+        frm.author_id.focus();
+		frm.author_id.placeholder="作者ID没有填写"
+        return false;
+     }
+	 if(frm.ISBN.value == "")//图书ISBN
+     {
+        
+        frm.ISBN.focus();
+		frm.ISBN.placeholder="ISBN没有填写"
+        return false;
+     }
+	  if(frm.price.value !=parseInt(frm.price.value))
+	 {
+		 frm.price.focus();
+		  frm.price.value="";
+		frm.price.placeholder="价格需要为整形"
+        return false;
+		 
+		 }
+	 var p=frm.price.value
+	 for(i=0;i<length(p);i++)
+	 {
+		 if(p[i]=='.')
+		 {
+			
+			 frm.price.focus();
+			  frm.price.value="";
+		frm.price.placeholder="价格需要为整形"
+        return false;
+			 }
+		 
+	 }
+	 
+	 
+}
+</script>
+</head>
+<body>
+<div class="demo-headline">
+        <h1 class="demo-logo">
+          <a href="../index/">
+          <h2>返回首页</h2>
+          </a>
+         </h1>
+</div>
+
+<div class="container">
+<div class="loginl" >
+<div class="login-screenl">
+        <div class="login-icon">
+        <img src="../Media/retina.png">
+           <h4>添加图书</h4>
+          </div>
+          <div class="login-form">
+    	<div class="control-group" >
+<form action="/insert_book/" name="frm" method="post" onSubmit="return  check()">
+		</div>
+        <input type="text" name="title" placeholder="题目" class="login-field"><br>
+        
+        <div class="control-group" >
+        <input type="text" name="publisher" placeholder="出版商" class="login-field"><br>
+        </div>
+        
+       <div class="control-group" >
+        <input type="datetime" name="publishDate" placeholder="出版日期" class="login-field"><br>
+        </div>
+        
+        <div class="control-group" >
+        <input type="text" name="price" placeholder="价格" class="login-field"><br>
+        </div>
+        
+        <div class="control-group" >
+        <input type="text" name="author_id" placeholder="作者ID" class="login-field"><br>
+        </div>
+        <div class="control-group" >
+        <input type="text" name="ISBN" placeholder="ISBN" class="login-field"><br>
+        </div>
+        
+        <input type="submit" value="增加" class="btn btn-large btn-block btn-primary">
+        
+</form>
+</div>
+</div>
+</div>
+<h3 align="center" >Powered by 李东升</h3>
+	  <br>
+      <br>
+      <br>
+</body>
+</html>
+

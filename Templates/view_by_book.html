@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>该图书相关信息</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+   
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../Media/material.min.css">
+    <link rel="stylesheet" href="../Media/styles.css">
+    <style>
+   
+	
+	
+	  
+	.demo-card-wide.mdl-card {
+	  width: 1200px;
+	  
+	}
+	.demo-card-wide > .mdl-card__title {
+	  color: #fff;
+	  height: 276px;
+	  margin:5px;
+	  
+	  
+	  background: url('../Media/b.jpg') center / cover;
+	}
+	
+	
+	.demo-card-wide > .mdl-card__menu {
+	  color: #fff;
+	}
+
+    </style>
+  
+</head>
+
+<body  class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">图书管理</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="../index/">返回首页</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="mdl-layout__content">
+    <div class="page-content">
+    
+  
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">图书作者详情</h2>
+  </div>
+  <div class="mdl-card__supporting-text" align="center">
+  此作者的全部作品
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">ISBN</th>
+          <th>题目</th>
+          <th>出版商</th>
+          <th>出版日期</th>
+          <th>价格</th>
+         
+        </tr>
+        
+      </thead>
+      <tbody>
+        
+        
+        
+    {% for book in book_list %}
+     <tr>
+      <td class="mdl-data-table__cell--non-numeric">{{ book.ISBN }}</td> 
+      <td>{{ book.Title }}</td> 
+      <td>{{ book.Publisher }}</td> 
+      <td>{{ book.PublishDate }}</td> 
+      <td>{{  book.Price}}元</td> 
+      <td>{{ book.title }}</td> 
+     
+     </tr>
+    {% endfor %}
+    
+  
+        
+      </tbody>
+    </table>
+    
+    <br>
+    <br>
+    作者详情
+    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">姓名</th>
+          <th>年龄</th>
+          <th>国籍</th>
+        </tr>
+        
+      </thead>
+      <tbody>
+        
+        
+    
+    {% for a in author %}
+     <tr>
+      <td class="mdl-data-table__cell--non-numeric">{{ a.Name }}</td> 
+      
+      <td>{{ a.Age }}</td> 
+      <td>{{a.Country}}</td>
+     </tr>
+    {% endfor %}
+    
+  
+        
+      </tbody>
+    </table>
+    
+    
+    <br>
+    <br>
+    
+        <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="../index/">
+          返回首页
+        </a>
+      </div>
+    
+</div>
+</div>
+</section>    
+    
+   
+
+
+    
+  </main>
+</div>
+
+
+<script src="../Media/material.min.js"></script>
+</body>
+</html>
